@@ -1,0 +1,72 @@
+[
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1655913600,
+    "sunrise": 1655886551,
+    "sunset": 1655942600,
+    "day": 17.74
+  },
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1656000000,
+    "sunrise": 1655972966,
+    "sunset": 1656029009,
+    "day": 20.17
+  },
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1656086400,
+    "sunrise": 1656059384,
+    "sunset": 1656115415,
+    "day": 16.27
+  },
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1656172800,
+    "sunrise": 1656145803,
+    "sunset": 1656201820,
+    "day": 16.89
+  },
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1656259200,
+    "sunrise": 1656232225,
+    "sunset": 1656288222,
+    "day": 21.14
+  },
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1656345600,
+    "sunrise": 1656318648,
+    "sunset": 1656374622,
+    "day": 20.0
+  },
+  {
+    "lat": 44.6462,
+    "lon": -63.5736,
+    "timezone": "America/Halifax",
+    "timezone_offset": -10800,
+    "dt": 1656432000,
+    "sunrise": 1656405074,
+    "sunset": 1656461019,
+    "day": 15.68
+  }
+]
