@@ -7,12 +7,19 @@ import org.dal.views.UserAuthenticationViewImpl;
 
 import java.util.Scanner;
 
+/**
+ * Main class containing the main method to run the application.
+ */
 public class MainApp {
 
-
+    /**
+     * Main method
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
-        System.out.println("Welcome to the Billa DB!");
 
+        System.out.println("Welcome to the Billa DB!");
         UserAuthenticationViewImpl view = new UserAuthenticationViewImpl(new User(), new UserAuthenticationServiceImpl());
         QueryHandlerService service = new QueryHandlerService();
         System.out.println("If you are a new user, press 1 or press any other key to login");
@@ -25,29 +32,29 @@ public class MainApp {
                 break;
             default:
                 authenticated = view.login();
-                break;
-        }
-        if (authenticated){
-            System.out.println("Login successful");
-            System.out.println();
-            boolean status = true;
-            System.out.println("Enter queries");
-            System.out.println("Press 0 to exit");
-            System.out.println("Enter erd after selecting a database to print cardinality");
-            while (status){
-                String sql = sc.nextLine();
-                switch (sql){
-                    case "0":
-                        status = false;
-                        break;
-                    default:
-                        service.queryHandler(sql);
+                if (authenticated){
+                    System.out.println("Login successful");
+                    System.out.println();
+                    boolean status = true;
+                    System.out.println("Enter queries");
+                    System.out.println("Press 0 to exit");
+                    System.out.println("Enter erd after selecting a database to print cardinality");
+                    while (status){
+                        String sql = sc.nextLine();
+                        switch (sql){
+                            case "0":
+                                status = false;
+                                break;
+                            default:
+                                service.queryHandler(sql);
+                        }
+                    }
                 }
-            }
+                else{
+                    System.out.println("Wrong credentials");
+                }
         }
-        else{
-            System.out.println("Wrong credentials");
-        }
+
         //view.register();
         //service.queryHandler("CREATE Database Mall");
         //service.queryHandler("CREATE TABLE Consumer (id INT, name VARCHAR, phone VARCHAR);");

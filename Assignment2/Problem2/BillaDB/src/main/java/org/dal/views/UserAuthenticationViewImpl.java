@@ -52,7 +52,14 @@ public class UserAuthenticationViewImpl implements UserAuthenticationView {
         user.setQuestion(question);
         user.setAnswer(answer);
 
-        return userService.register(user);
+        if (userService.register(user)) {
+            System.out.println("User registered successfully");
+            return true;
+        }
+        else{
+            System.out.println("Error while registering");
+            return false;
+        }
     }
 
     @Override

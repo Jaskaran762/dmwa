@@ -47,8 +47,8 @@ public class QueryHandlerService {
     private void queryHandlerForTransaction(String sql) throws Exception {
 
         String[] sqlParts = sql.split(" ");
-        sqlParts[1].replace(";", "");
-        sqlParts[sqlParts.length-1].replace(";", "");
+        sqlParts[1] = sqlParts[1].replace(";", "");
+        sqlParts[sqlParts.length-1]= sqlParts[sqlParts.length-1].replace(";", "");
 
         if (sqlParts[1].equalsIgnoreCase("transaction") &&
                 sqlParts[sqlParts.length-1].equalsIgnoreCase("transaction")
@@ -67,6 +67,7 @@ public class QueryHandlerService {
                     newSql = newSql.concat(sqlParts[i]);
                 }
                 queryHandler(newSql);
+                System.out.println("TRANSACTION COMMITTED");
             }
         }
         else{
