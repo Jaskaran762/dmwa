@@ -30,7 +30,7 @@ public class Main {
             } else {
                 classification = "Neutral News";
             }
-            System.out.format("%d ||  %s  || %s", ++cnt, model.getTitle(), classification);
+            System.out.format("%d ||  %s  || %s  || %s", ++cnt, model.getTitle(), classification, polarityScore);
             System.out.println();
         }
 
